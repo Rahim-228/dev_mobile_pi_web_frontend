@@ -127,7 +127,7 @@ class _EditPlaceScreenState extends State<EditPlaceScreen> {
                     child: _imageBytes != null
                         ? Image.memory(_imageBytes!, fit: BoxFit.cover, width: double.infinity)
                         : (widget.place.image != null
-                            ? Image.network('http://localhost:3000${widget.place.image}', fit: BoxFit.cover, width: double.infinity, errorBuilder: (_, _, _) => _imagePlaceholder())
+                            ? Image.network('${ApiService.imageBaseUrl}${widget.place.image}', fit: BoxFit.cover, width: double.infinity, errorBuilder: (_, _, _) => _imagePlaceholder())
                             : _imagePlaceholder()),
                   ),
                 ),

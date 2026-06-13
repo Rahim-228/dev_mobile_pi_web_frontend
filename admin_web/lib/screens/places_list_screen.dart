@@ -149,7 +149,7 @@ class _PlacesListScreenState extends State<PlacesListScreen> {
                                             width: 64,
                                             height: 64,
                                             child: place.image != null
-                                                ? Image.network('http://localhost:3000${place.image}', fit: BoxFit.cover, errorBuilder: (_, _, _) => _placeholderIcon(catColor))
+                                                ? Image.network('${ApiService.imageBaseUrl}${place.image}', fit: BoxFit.cover, errorBuilder: (_, _, _) => _placeholderIcon(catColor))
                                                 : _placeholderIcon(catColor),
                                           ),
                                         ),

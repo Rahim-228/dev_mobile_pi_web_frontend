@@ -49,7 +49,7 @@ class Place {
       latitude: json['latitude'] != null ? double.parse(json['latitude'].toString()) : null,
       longitude: json['longitude'] != null ? double.parse(json['longitude'].toString()) : null,
       image: json['image']?.toString(),
-      isActive: json['is_active'] is int ? json['is_active'] : int.parse(json['is_active'].toString()),
+      isActive: json['is_active'] is int ? json['is_active'] : (json['is_active'] == true || json['is_active'] == '1' ? 1 : 0),
       categoryNameFr: json['category_name_fr']?.toString(),
       categoryNameAr: json['category_name_ar']?.toString(),
       categoryNameEn: json['category_name_en']?.toString(),

@@ -38,7 +38,7 @@ class PlaceDetailScreen extends StatelessWidget {
             if (place.image != null && place.image!.isNotEmpty)
               ClipRRect(
                 child: Image.network(
-                  'http://localhost:3000${place.image}',
+                  '${ApiService.imageBaseUrl}${place.image}',
                   height: 280,
                   width: double.infinity,
                   fit: BoxFit.cover,

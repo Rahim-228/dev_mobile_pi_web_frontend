@@ -129,7 +129,7 @@ class _CategoryPlacesScreenState extends State<CategoryPlacesScreen> {
                               children: [
                                 if (place.image != null && place.image!.isNotEmpty)
                                   Image.network(
-                                    'http://localhost:3000${place.image}',
+                                    '${ApiService.imageBaseUrl}${place.image}',
                                     height: 160,
                                     fit: BoxFit.cover,
                                     errorBuilder: (_, _, _) => Container(height: 160, color: Colors.grey[200]),

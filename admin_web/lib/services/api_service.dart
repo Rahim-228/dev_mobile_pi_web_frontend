@@ -5,7 +5,8 @@ import '../models/place.dart';
 import '../models/category.dart';
 
 class ApiService {
-  static const String baseUrl = 'http://localhost:3000/api';
+  static const String baseUrl = 'https://dev-mobile-backend-ftw2.onrender.com/api';
+  static const String imageBaseUrl = 'https://dev-mobile-backend-ftw2.onrender.com';
   static String? token;
   static String? _lastError;
 
